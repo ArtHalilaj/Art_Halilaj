@@ -1,0 +1,355 @@
+/* General and Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #edf0f1;
+    background-color: #1c1f24;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #24252a;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+}
+
+.nav__links li {
+    padding: 0 20px;
+}
+
+.nav__links a {
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav__links a:hover {
+    color: #0088a9;
+}
+
+.cta {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Projects Section */
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 50px 10%;
+}
+
+.project {
+    background-color: #2c2f33;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.project-video video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-info {
+    padding-left: 20px;
+}
+
+.project-info h2 {
+    color: #0088a9;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    color: #b0b3b8;
+    line-height: 1.8;
+}
+
+.project-info h3 {
+    color: #0088a9;
+    margin-top: 20px;
+}
+
+.tech-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.tech-list li {
+    padding: 5px 0;
+    color: #edf0f1;
+    background-color: #3b3e44;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+}
+
+/* Mobile Nav */
+.menu {
+    display: none;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+}
+
+.overlay--active {
+    width: 100%;
+}
+
+.overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #0088a9;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+    cursor: pointer;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+        display: none;
+    }
+    .menu {
+        display: initial;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        grid-template-columns: 1fr;
+    }
+
+    .project-info {
+        padding-left: 0;
+    }
+}
+/* About Me Section */
+#about-me-section {
+    padding: 50px 10%;
+    background-color: #1c1f24;
+    text-align: center;
+    flex: 1;
+}
+
+.about-me-title {
+    font-size: 36px;
+    color: #edf0f1;
+    margin-bottom: 20px;
+}
+
+.about-me-description {
+    color: #b0b3b8;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+#skills-toggle {
+    padding: 10px 30px;
+    background-color: #0088a9;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px;
+}
+
+#skills-toggle:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Skills Section */
+#skills-section {
+    display: none; /* Initially hidden */
+    padding: 50px 10%;
+    background-color: #24252a;
+}
+
+.skills-container {
+    text-align: center;
+}
+
+.skills-title {
+    font-size: 30px;
+    color: #edf0f1;
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background-color: #2c2f33;
+    padding: 20px;
+    border-radius: 10px;
+    color: #edf0f1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.skill h3 {
+    color: #0088a9;
+    margin-bottom: 10px;
+}
+
+footer {
+  
+    left: 0;
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    background-color: #24252a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+/* Contact Page Styling */
+#contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #1c1f24;
+}
+
+#contact-page .contact-container {
+    background-color: #24252a;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+    animation: fadeIn 0.8s ease;
+    color: #edf0f1;
+}
+
+#contact-page h2 {
+    font-size: 36px; 
+    margin-bottom: 30px;
+    color: #edf0f1;
+    border-bottom: 2px solid #0088a9;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#contact-page .contact-info p {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #edf0f1;
+}
+
+#contact-page .contact-info strong {
+    width: 100px; /* Align the labels */
+    display: inline-block;
+}
+
+#contact-page .contact-info a {
+    color: #0088a9;
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+#contact-page .contact-info a:hover {
+    color: #00acc1;
+    border-bottom: 2px solid #00acc1;
+}
+
+/* Smooth Fade-in Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-page .contact-container {
+        width: 90%;
+        padding: 30px;
+    }
+}
