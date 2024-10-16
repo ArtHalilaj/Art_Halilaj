@@ -8,6 +8,31 @@
     <link rel="icon" type="image/png" href="spider.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Add your existing styles here */
+
+        /* Project styles */
+        .project {
+            position: relative; /* Ensures positioning context for absolute children */
+            overflow: hidden; /* Ensures the transformed elements don’t overflow */
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+        }
+
+        .project:hover {
+            transform: scale(1.05); /* Slightly increase size on hover */
+        }
+
+        /* Ensure iframe doesn't overflow the project container */
+        .project-video {
+            overflow: hidden;
+        }
+
+        /* You may also want to style the project-info */
+        .project-info {
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,10 +52,7 @@
         <!-- Supermarket E-commerce Project -->
         <div class="project">
             <div class="project-video">
-                <video controls>
-                    <source src="videos/E-Shopping - video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe width="720" height="360" src="https://www.youtube.com/embed/4X9rcvNUIhA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="project-info">
                 <h2>Supermarket E-commerce</h2>
@@ -49,10 +71,7 @@
         <!-- Mercedes Benz Dealership Project -->
         <div class="project">
             <div class="project-video">
-                <video controls>
-                    <source src="videos/Car Dealership Website - video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe width="720" height="360" src="https://www.youtube.com/embed/JAOY0DPvrTk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="project-info">
                 <h2>Mercedes Benz Dealership</h2>
@@ -71,10 +90,7 @@
         <!-- Student Management System Project -->
         <div class="project">
             <div class="project-video">
-                <video controls>
-                    <source src="videos/StudentMS - video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe width="720" height="360" src="https://www.youtube.com/embed/zGQnsV6HLbw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="project-info">
                 <h2>Student Management System</h2>
@@ -103,7 +119,6 @@
     <footer>
         <p>&copy; 2024 Art Halilaj. All rights reserved.</p>
     </footer>
-
 
     <script type="text/javascript" src="mobile.js"></script>
 </body>
