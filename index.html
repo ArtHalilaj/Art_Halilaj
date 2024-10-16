@@ -8,27 +8,27 @@
     <link rel="icon" type="image/png" href="spider.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
     <style>
-        /* Add your existing styles here */
-
-        /* Project styles */
+        
         .project {
-            position: relative; /* Ensures positioning context for absolute children */
-            overflow: hidden; /* Ensures the transformed elements don’t overflow */
-            transition: transform 0.3s ease; /* Smooth transition for scaling */
+            position: relative; 
+            overflow: hidden; 
+            transition: transform 0.3s ease; 
         }
 
         .project:hover {
-            transform: scale(1.05); /* Slightly increase size on hover */
+            transform: scale(1.05); 
         }
 
-        /* Ensure iframe doesn't overflow the project container */
+      
         .project-video {
             overflow: hidden;
         }
 
-        /* You may also want to style the project-info */
+     
         .project-info {
             padding: 20px;
         }
@@ -44,7 +44,10 @@
             </ul>
         </nav>
         <a style="color: white;text-decoration: none;" class="cta" href="contact.html">Contact</a>
-        <p class="menu cta">Menu</p>
+        <p class="menu cta">
+            <i class="fas fa-bars"></i> 
+        </p>
+        
     </header>
 
     <!-- Projects Section -->
@@ -113,6 +116,7 @@
         <div class="overlay__content">
             <a href="index.html">Projects</a>
             <a href="aboutme.html">About Me</a>
+            <a href="contact.html">Contact</a>
         </div>
     </div>
 

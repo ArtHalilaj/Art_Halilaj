@@ -152,6 +152,8 @@ header {
     font-size: 36px;
     display: block;
     transition: all 0.3s ease;
+    color: white;
+    text-decoration: underline #0088a9;
 }
 
 .overlay a:hover,
@@ -352,4 +354,129 @@ footer {
         width: 90%;
         padding: 30px;
     }
+}
+
+/* Mobile-specific styles for Projects Section */
+@media only screen and (max-width: 600px) {
+    .projects {
+        padding: 20px 5%;
+    }
+
+    .project {
+        padding: 20px;
+    }
+
+    .project-video iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-info h2 {
+        font-size: 18px;
+    }
+
+    .project-info p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .project-info h3 {
+        font-size: 16px;
+    }
+
+    .tech-list li {
+        font-size: 12px;
+        padding: 3px 7px;
+    }
+}
+
+
+/* Mobile-specific styles for About Me and Skills Sections */
+@media only screen and (max-width: 600px) {
+    /* General adjustments for mobile */
+    body {
+        font-size: 14px; /* Smaller base font size */
+    }
+
+    header {
+        padding: 20px 5%; /* Adjust header padding */
+    }
+
+    .logo {
+        font-size: 24px; /* Smaller logo */
+    }
+
+    .nav__links li {
+        padding: 0 10px; /* Smaller spacing for nav items */
+    }
+
+    /* About Me Section */
+    #about-me-section {
+        padding: 20px 5%; /* Smaller padding */
+        text-align: center; /* Center text on mobile */
+    }
+
+    .about-me-title {
+        font-size: 24px; /* Smaller title font */
+        margin-bottom: 15px; /* Reduced spacing */
+    }
+
+    .about-me-description {
+        font-size: 14px; /* Smaller paragraph font */
+        line-height: 1.6; /* Adjust line height for readability */
+    }
+
+    #skills-toggle {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    /* Skills Section */
+    #skills-section {
+        padding: 20px 5%; /* Smaller padding */
+    }
+
+    .skills-title {
+        font-size: 22px; /* Smaller skills section title */
+        margin-bottom: 20px; /* Reduced spacing */
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skills vertically */
+        gap: 15px; /* Reduced spacing between skills */
+    }
+
+    .skill {
+        padding: 10px; /* Adjust padding inside each skill */
+        font-size: 14px; /* Smaller skill font size */
+    }
+
+    .skill h3 {
+        font-size: 16px; /* Smaller skill title font */
+    }
+
+    footer {
+        padding: 10px; /* Adjust footer padding */
+        font-size: 12px; /* Smaller footer font */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #skills-toggle {
+        display: block; /* Ensure the button is visible */
+        padding: 10px 15px;
+        font-size: 16px; /* Adjust for readability on small screens */
+        margin: 20px auto; /* Center button on mobile */
+    }
+
+    .about-me-container {
+        text-align: center; /* Center-align content for mobile */
+    }
+
+    /* Adjust any other styles that might hide the button */
+}
+
+.menu.cta i { 
+    font-size: 20px;    /* Adjust the size of the icon */
+    vertical-align: middle; /* Align icon vertically with text */
 }
